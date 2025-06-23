@@ -25,13 +25,14 @@ public with sharing class TransactionFinalizerExample implements Queueable, Fina
 /* 
 
 HOW TO TEST:
-- In the developer console, run the following code:
 
-    TransactionFinalizerExample job = new TransactionFinalizerExample();
-    System.enqueueJob(job);
-    You have 50% chance of encountering an unhandled exception.
+In the developer console, run the following code:
 
-    If you encounter an unhandled exception, you will see the Queueable log with a 'Simulated failure' status and the following in the finalizer log:
+TransactionFinalizerExample job = new TransactionFinalizerExample();
+System.enqueueJob(job);
+You have 50% chance of encountering an unhandled exception.
+
+- If you encounter an unhandled exception, you will see the Queueable log with a 'Simulated failure' status and the following in the finalizer log:
 
     START FINALIZER
     We are in the finalizer
@@ -39,7 +40,7 @@ HOW TO TEST:
     Exception: System.CalloutException: Simulated failure
     END FINALIZER
 
-    If you do not encounter an unhandled exception, you will see the Queueable log with a Success status and the following in the finalizer log:
+- If you do not encounter an unhandled exception, you will see the Queueable log with a Success status and the following in the finalizer log:
 
     START FINALIZER
     We are in the finalizer
