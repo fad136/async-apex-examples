@@ -1,0 +1,1 @@
+Include the Batch_Log__c class in the objects folder of your sfdx project to deploy the class
